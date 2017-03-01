@@ -18,3 +18,5 @@ config :logger,
         backends: [ :console, LoggerMulticastBackend ],
         level: :debug,
         format: "$time $metadata[$level] $message\n"
+
+config :nerves_cell, Mix.Project.config

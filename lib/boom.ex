@@ -15,7 +15,8 @@ defmodule Boom do
       worker(Task, [fn -> blinker() end], id: Boom.Blinker),
       worker(Task, [fn -> init_kernel_modules() end], restart: :transient, id: Nerves.Init.KernelModules),
       worker(Task, [fn -> init_wifi_network() end], restart: :transient, id: Nerves.Init.WifiNetwork),
-      worker(Task, [fn -> talker() end], id: Boom.Talker)
+      worker(Task, [fn -> talker() end], id: Boom.Talker),
+      worker(NetworkManager, [@interface], restart: :transient, id: Boom.Init.NetworkManager),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

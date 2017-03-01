@@ -1,5 +1,7 @@
 # Boom
 
+Project fun from ElixirDaze 2017
+
 To start your Nerves app:
 
   * Install dependencies with `mix deps.get`

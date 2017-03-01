@@ -42,7 +42,7 @@ defmodule Boom do
   end
   
   def talker() do
-    Logger.info "Serene says huzzah! \o/"
+    Logger.info "wooteroni 🍕"
     :timer.sleep 1000
     talker()
   end
